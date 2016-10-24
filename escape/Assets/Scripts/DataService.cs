@@ -171,8 +171,8 @@ public class DataService{
 				SceneDTO currentSceneDTO = new SceneDTO{
 
 					SceneID = aScene.ID,
-					GameID = 1, // need to add a Game Number here
-					Name = "Any name",
+					GameID = 1, 
+					Name = "Escape Jungle",
 					Story =  aScene.Description
 				};
 
@@ -255,47 +255,7 @@ public class DataService{
 
 		}// for eacn SceneDTO
 
-	}
-
-    //Creating database
-	public void CreateDB(){
-
-		int aCount = _connection.Table<Person>().Count();
-
-		if(aCount > 0 )
-		{
-		  _connection.DropTable<Person> ();
-		  _connection.CreateTable<Person> ();
-		}
-
-		_connection.InsertAll (new[]{
-
-			new Person{
-				Id = 1,
-				Name = "Tom",
-				Surname = "Perez",
-				Age = 56
-			},
-			new Person{
-				Id = 2,
-				Name = "Fred",
-				Surname = "Arthurson",
-				Age = 16
-			},
-			new Person{
-				Id = 3,
-				Name = "John",
-				Surname = "Doe",
-				Age = 25
-			},
-			new Person{
-				Id = 4,
-				Name = "Roberto",
-				Surname = "Huertas",
-				Age = 37
-			}
-		});
-	}
+	}     
 
 	public IEnumerable<Person> GetPersons(){
 
