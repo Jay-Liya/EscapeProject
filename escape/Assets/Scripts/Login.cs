@@ -21,7 +21,7 @@ public class Login : MonoBehaviour {
 
         DataService aDS = new DataService();
 
-        //aDS.makeNewUser("Jay", "123"); //Creating the user with name "Jay" and password "123"
+        //aDS.makeNewUser("jay", "123"); //Creating the user with name "Jay" and password "123"
 
         if (aDS.CheckLogin(name, password) )
         {
