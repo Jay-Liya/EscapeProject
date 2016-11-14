@@ -1,5 +1,4 @@
 ﻿using SQLite4Unity3d;
-using UnityEngine;
 using System.IO;
 
 #if !UNITY_EDITOR
@@ -66,8 +65,7 @@ public class DataService{
 		#endif
 
 		currentDbPath = dbPath;
-		Debug.Log("Final PATH: " + dbPath);
-
+		
 		return result;
 	}
 
@@ -187,16 +185,23 @@ public class DataService{
 
 	}
 
+    public void MakeNetPersist()
+    {
+        List<string> tableNames = new List<string>();
+        tableNames.Add("tblPlayer");
+
+        if(GameModel.JSNNet!=null)
+            GameModel.JSNNet.MakeTables("ZORG321", tableNames, "53211");
+    }
+
     // Scene Load
-	public void LoadScenes( ){
+    public void LoadScenes( ){
 
 		// Clear the current Scenes
 		if(Scene.AllScenes.Count > 0){
 
 			Scene.AllScenes.Clear();
 		}
-
-		// What to do about the current Scene ? GameModel.currentPlayer.CurrentScene
 
 		// Get the Scenes
 		var SceneDTOs = _connection.Table<SceneDTO>();
@@ -211,10 +216,12 @@ public class DataService{
 			if( firstCheckScene == null)
 				aScene = new Scene(){ ID = aDTO.SceneID, Description = aDTO.Story};
 			else
-				aScene = firstCheckScene;			
+				aScene = firstCheckScene;
 
-			// Get North , South, East and West
-			var directions = _connection.Table<SceneToSceneDTO>().Where(
+            string testJSN = aDTO.ToString();
+
+            // Get North , South, East and West
+            var directions = _connection.Table<SceneToSceneDTO>().Where(
 						x => x.FromSceneID == aDTO.SceneID);
 		    
 			foreach( SceneToSceneDTO aDirScene in directions){
@@ -285,6 +292,7 @@ public class DataService{
 		return p;
 	}
     
+    //Checking credentials
     public bool CheckLogin(string pName, string pPassword)
     {
         int count = 0;
@@ -298,6 +306,7 @@ public class DataService{
         return count > 0;
     }
 
+    //Making new user
     public void makeNewUser(string pName, string pPassword)
     {
         CreateIfNotExists<Person>();

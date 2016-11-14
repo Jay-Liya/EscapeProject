@@ -1,7 +1,6 @@
 ﻿using System;
-using SQLite4Unity3d;
-using UnityEngine;
 
+//Class as Data tranfer object for Player data
 [Serializable]
 public class PlayerDTO
 {
@@ -10,8 +9,9 @@ public class PlayerDTO
 		public string PlayerName;
 		public string Password;
 		public float Experience;
+        public float Health;
 
-		public PlayerDTO ()
+        public PlayerDTO ()
 		{
 		}
 }

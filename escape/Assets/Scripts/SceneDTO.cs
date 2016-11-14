@@ -1,15 +1,59 @@
 ﻿using SQLite4Unity3d;
+using UnityEngine;
 
 //Class as Data tranfer object for Scene data
 public class SceneDTO
 {
-	[PrimaryKey]
-	public int SceneID{ get; set;} 
-	public int GameID{ get; set;}
-	public string Name{ get; set;}
-	public string Story{ get; set;}
+    [SerializeField]
+    private int _SceneID;
+    [SerializeField]
+    private int _GameID;
+    [SerializeField]
+    private string _Name;
+    [SerializeField]
+    private string _Story;
 
-	public override string ToString ()
+    [PrimaryKey]
+    public int SceneID {
+
+        get { return _SceneID;
+        }
+        set {
+            _SceneID = value;
+        }
+    }
+
+    public int GameID {
+
+        get {
+            return _GameID;
+        }
+        set {
+            _GameID = value;
+        }
+    }
+
+    public string Name {
+
+        get {
+            return _Name;
+        }
+        set {
+            _Name = value;
+        }
+    }
+
+    public string Story {
+
+        get {
+            return _Story;
+        }
+        set {
+            _Story = value;
+        }
+    }
+
+    public override string ToString ()
 	{
 		return string.Format ("[Scene: SceneID={0}, GameID={1},  Name={2}, Story={3}]", SceneID, GameID, Name, Story);
 	}

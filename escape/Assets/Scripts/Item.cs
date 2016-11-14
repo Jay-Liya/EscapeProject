@@ -1,4 +1,5 @@
-﻿public class Item
+﻿//Class for Item
+public class Item
 {
 	private string _description;
 

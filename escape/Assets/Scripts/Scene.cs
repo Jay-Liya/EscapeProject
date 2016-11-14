@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
 //Class to hold Scene details such as players, array of connected scenes, description, id and list of scenes
 public class Scene
@@ -91,6 +92,11 @@ public class Scene
         Scene.AllScenes.Add(this);
     }
 
+    public override string ToString()
+    {
+        string result = JsonUtility.ToJson(this);        
+        return result;
+    }
 }
 
 

@@ -1,5 +1,4 @@
 ﻿using System;
-using UnityEngine;
 
 public delegate void aDisplayer( String value );
 
@@ -27,7 +26,6 @@ public class CommandProcessor
                 case "pick":
                     if (parts[1] == "up")
                     {
-                        Debug.Log("Got Pick up");
                         strResult = "Got Pick up";
 
                         if (parts.Length == 3)
@@ -42,27 +40,22 @@ public class CommandProcessor
                     switch (parts[1])
                     {
                         case "north":
-                            Debug.Log("Got go North");
                             GameModel.go(GameModel.DIRECTION.North);
                             break;
 
                         case "south":
-                            Debug.Log("Got go South");
                             GameModel.go(GameModel.DIRECTION.South);
                             break;
 
                         case "west":
-                            Debug.Log("Got go West");
                             GameModel.go(GameModel.DIRECTION.West);
                             break;
 
                         case "east":
-                            Debug.Log("Got go East");
                             GameModel.go(GameModel.DIRECTION.East);
                             break;
 
                         default:
-                            Debug.Log(" do not know how to go there");
                             strResult = "Do not know how to go there";
                             break;
                     }// end "go" switch
@@ -72,7 +65,6 @@ public class CommandProcessor
                     break;
 
                 default:
-                    Debug.Log("Do not understand");
                     strResult = "Do not understand";
                     break;
 

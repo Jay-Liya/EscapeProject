@@ -1,6 +1,7 @@
 ﻿using System.Timers;
 using UnityEngine;
 
+//Class for Fake Accelermometer
 public class FakeAccelerometer : MonoBehaviour
 {
     private int steps = 10;

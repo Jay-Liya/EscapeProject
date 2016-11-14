@@ -1,12 +1,4 @@
-﻿using System;
-using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
-
-
-//Class to hold game data
+﻿//Class to hold game data
 public static class GameModel
 {
 	private static string _name;
@@ -14,6 +6,8 @@ public static class GameModel
 	public enum DIRECTION  {North, South, East, West};
 	private static Scene _start_scene; 
 	public static Players PlayersInGame = new Players();
+    public static JSNDrop JSNNet;
+    public static DataService theService;
 
     //property Start_scene
     public static Scene Start_scene{
@@ -55,7 +49,7 @@ public static class GameModel
 
 	}
 
-	public static void go(DIRECTION pDirection)
+    public static void go(DIRECTION pDirection)
 	{
 		currentPlayer.Move(pDirection);
 	}
@@ -64,7 +58,8 @@ public static class GameModel
 	public static void makeScenes()
 	{
         Scene tmp;
-        DataService theService = new DataService();
+        theService = new DataService();
+        theService.MakeNetPersist();
 
         if (theService.DbExists("GameNameDb"))
         {

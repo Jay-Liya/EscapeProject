@@ -1,11 +1,8 @@
 ﻿using System;
 
-using System.Collections.Generic;
-using UnityEngine;
-
 [Serializable]
-	public class SceneNTO
-	{
+public class SceneNTO
+{
 	public int ID;
 
 	public string Description;
@@ -21,8 +18,6 @@ using UnityEngine;
     public SceneNTO ()
 	{
       
-	}
-	    
-
+	}  
 }
 

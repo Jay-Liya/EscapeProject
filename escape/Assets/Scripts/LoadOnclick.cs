@@ -5,7 +5,7 @@ using UnityEngine.UI;
 //Class for click event
 public class LoadOnclick : MonoBehaviour {
 
-    public Canvas nextCanvas;
+    public Canvas nextCanvas;    
 
     //Loading Scene
     public void LoadScene(string pSceneName){
@@ -17,7 +17,7 @@ public class LoadOnclick : MonoBehaviour {
 	public void ShowCanvas(Canvas pCanvas){
 		
 		pCanvas.gameObject.SetActive(true);
-		Debug.Log(gameObject.name);
+		//Debug.Log(gameObject.name);
 		Canvas[] canvases = gameObject.GetComponentsInChildren<Canvas>();
 
 		foreach(Canvas cnv in canvases){
@@ -27,8 +27,13 @@ public class LoadOnclick : MonoBehaviour {
 		 		cnv.gameObject.SetActive(false);
 			}
 		}
-		 
-	}
+        
+        if (pCanvas.name == "InventoryCanvas")
+        {
+            Player lcPlayer= new Player();
+            lcPlayer.InventoryUpdate();
+        }        
+    }
 
     public void Login()
     {
@@ -41,10 +46,7 @@ public class LoadOnclick : MonoBehaviour {
         string password = goPassword.GetComponent<InputField>().text;// aText.text;
 
         DataService aDS = new DataService();
-
-        //aDS.MakeAnTestAccount("sunil", "real123");
-        //aDS.MakeAnTestAccount("todd", "sdv602");
-
+        
         if (aDS.CheckLogin(name, password))
         {
             // LOGIN OK

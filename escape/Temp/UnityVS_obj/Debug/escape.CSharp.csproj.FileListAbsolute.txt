@@ -1,0 +1,16 @@
+C:\Users\Justin\Documents\unity\escape-jungle\escape\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+C:\Users\Justin\Documents\unity\escape-jungle\escape\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+C:\Users\Justin\Documents\unity\escape-jungle\escape\Temp\UnityVS_bin\Debug\HtmlAgilityPack.dll
+C:\Users\Justin\Documents\unity\escape-jungle\escape\Temp\UnityVS_bin\Debug\UnityEditor.dll
+C:\Users\Justin\Documents\unity\escape-jungle\escape\Temp\UnityVS_bin\Debug\UnityEngine.dll
+C:\Users\Justin\Documents\unity\escape-jungle\escape\Temp\UnityVS_bin\Debug\UnityEngine.Networking.dll
+C:\Users\Justin\Documents\unity\escape-jungle\escape\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+C:\Users\Justin\Documents\unity\escape-jungle\escape\Temp\UnityVS_bin\Debug\UnityEngine.xml
+C:\Users\Justin\Documents\unity\escape-jungle\escape\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+C:\Users\Justin\Documents\unity\escape-jungle\escape\Temp\UnityVS_bin\Debug\UnityEngine.Networking.xml
+C:\Users\Justin\Documents\unity\escape-jungle\escape\Temp\UnityVS_bin\Debug\UnityEditor.xml
+C:\Users\Justin\Documents\unity\escape-jungle\escape\Temp\UnityVS_bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Justin\Documents\unity\escape-jungle\escape\Temp\UnityVS_bin\Debug\HtmlAgilityPack.xml
+C:\Users\Justin\Documents\unity\escape-jungle\escape\Temp\UnityVS_obj\Debug\escape.CSharp.csprojResolveAssemblyReference.cache
+C:\Users\Justin\Documents\unity\escape-jungle\escape\Temp\UnityVS_obj\Debug\Assembly-CSharp.dll
+C:\Users\Justin\Documents\unity\escape-jungle\escape\Temp\UnityVS_obj\Debug\Assembly-CSharp.pdb

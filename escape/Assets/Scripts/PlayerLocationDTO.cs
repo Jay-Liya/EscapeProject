@@ -1,8 +1,8 @@
 ﻿using System;
-using SQLite4Unity3d;
 using UnityEngine;
 using System.Collections.Generic;
 
+//Class as Data tranfer object for Player location data
 [Serializable]
 public class PlayerLocationDTO
 {
@@ -11,8 +11,29 @@ public class PlayerLocationDTO
 	[SerializeField]
 	private int _LocationID;
 
-	public int PlayerID{ get{ return _PlayerID;} set{_PlayerID = value;}}
-	public int LocationID{ get{ return _LocationID;} set{_LocationID = value;}}
+	public int PlayerID{
+
+        get {
+            return _PlayerID;
+        }
+
+        set {
+            _PlayerID = value;
+        }
+    }
+
+	public int LocationID{
+
+        get {
+
+            return _LocationID;
+        }
+
+        set {
+
+            _LocationID = value;
+        }
+    }
 
 	public void Put(){
 	}

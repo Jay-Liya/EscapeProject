@@ -9,6 +9,7 @@ public class TextInput : MonoBehaviour {
 	public Text output;
 
 	public void TextUpdate(string aStr){
+
 		output.text = aStr;
 	}
     
@@ -26,12 +27,9 @@ public class TextInput : MonoBehaviour {
     //Submitting Input
 	private void SubmitInput(string arg0)
 	{
-		string currentText = output.text;
-
-		CommandProcessor aCmd = new CommandProcessor();
-        
+		//string currentText = output.text;
+		CommandProcessor aCmd = new CommandProcessor();        
 		aCmd.Parse(arg0,TextUpdate);
-
 		input.text = "";
 		input.ActivateInputField();
 
@@ -40,6 +38,6 @@ public class TextInput : MonoBehaviour {
     //When input changes
 	private void ChangeInput( string arg0)
 	{
-		Debug.Log(arg0);
+		//Debug.Log(arg0);
 	}
 }

@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
-using System.Collections;
 
+//Class for JSON Http
 public class JSONHttp : MonoBehaviour {
 
-	// Use this for initialization
+	//Initialization
 	void Start () {
 	
 	}
@@ -11,8 +11,8 @@ public class JSONHttp : MonoBehaviour {
 	private string _serverURL = "http://jsnDrop.com/jsndrop";
 
 	public string getJSON<T>(T anObject){
+
 		string result = JsonUtility.ToJson(anObject);
-		Debug.Log(result);
 		return result;
 	}
 }
